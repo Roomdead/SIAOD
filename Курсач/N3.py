@@ -9,7 +9,8 @@ def sol(n, p1, p2):
         act_num += 1
     return act_num
 
-n = 5
-p1 = '15234'
-p2 = '12345'
+
+n = int(input())
+p1 = list(map(int, input().split(" ")))
+p2 = list(map(int, input().split(" ")))
 print(sol(n, p1, p2))
