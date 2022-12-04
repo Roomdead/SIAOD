@@ -1,0 +1,10 @@
+def quickSort(arr):
+    if len(arr) <= 1:
+        return arr
+
+    startElement = arr[0]
+    lowArr = list(filter(lambda x: x < startElement, arr))
+    midArr = [i for i in arr if i == startElement]
+    highArr = list(filter(lambda x: x > startElement, arr))
+
+    return quickSort(lowArr) + midArr + quickSort(highArr)
